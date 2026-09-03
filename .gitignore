@@ -1,0 +1,13 @@
+# Build artifacts (MSVC / cl.exe)
+*.exe
+*.obj
+*.ilk
+*.pdb
+*.exp
+*.lib
+*.idb
+
+# Visual Studio Code
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
