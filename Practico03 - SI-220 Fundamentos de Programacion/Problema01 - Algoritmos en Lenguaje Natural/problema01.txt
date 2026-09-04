@@ -1,0 +1,141 @@
+PROBLEMA 1 - ALGORITMOS EN LENGUAJE NATURAL
+Practico N.3 - SI-220 Fundamentos de Programacion
+
+Enunciado:
+Construir un algoritmo en lenguaje natural para cada uno de los siguientes
+problemas:
+  a) Conducir un vehiculo
+  b) Realizar una llamada telefonica
+  c) Resolver la ecuacion cuadratica
+
+===============================================================================
+QUE ES UN ALGORITMO EN LENGUAJE NATURAL
+===============================================================================
+
+Un algoritmo en lenguaje natural es una secuencia ORDENADA y PRECISA de pasos,
+escrita en espanol comun (sin usar codigo ni simbolos de programacion), que
+describe como resolver un problema o realizar una tarea. Aunque no use
+sintaxis de un lenguaje de programacion, debe conservar las mismas
+caracteristicas que un algoritmo formal:
+
+  - Tiene un INICIO y un FIN bien definidos.
+  - Los pasos estan numerados y se ejecutan uno despues del otro, en el
+    orden en que estan escritos (esto se llama "flujo secuencial").
+  - Puede tener DECISIONES: puntos donde, segun una condicion, el algoritmo
+    sigue por un camino u otro (por ejemplo "si el semaforo esta en rojo,
+    entonces detenerse; si no, continuar"). Esto es exactamente lo mismo
+    que hace un "if/else" en un lenguaje de programacion, solo que aqui se
+    expresa con palabras.
+  - Cada paso debe ser lo suficientemente claro y concreto como para que
+    cualquier persona (o una maquina) pueda seguirlo sin ambiguedad.
+
+Por eso, aunque estos algoritmos parezcan "instrucciones cotidianas", en
+realidad son el mismo tipo de razonamiento logico que despues, en C++,
+se escribe como instrucciones, condiciones (if/else) y secuencias de
+codigo.
+
+===============================================================================
+a) ALGORITMO: CONDUCIR UN VEHICULO
+===============================================================================
+
+INICIO
+ 1. Acercarse al vehiculo y verificar que este en buen estado exterior
+    (llantas, luces, espejos).
+ 2. Abrir la puerta del conductor y subir al vehiculo.
+ 3. Cerrar la puerta y colocarse el cinturon de seguridad.
+ 4. Ajustar el asiento y los espejos retrovisores hasta tener una buena
+    vision.
+ 5. Verificar que el vehiculo este en punto neutro (o en posicion de
+    estacionamiento, si es automatico) y que el freno de mano este puesto.
+ 6. Insertar la llave (o presionar el boton de encendido) y encender el
+    motor.
+ 7. Verificar los indicadores del tablero (combustible, temperatura,
+    luces de advertencia).
+ 8. Quitar el freno de mano.
+ 9. Revisar los espejos y el punto ciego antes de iniciar la marcha.
+10. Colocar el vehiculo en la primera marcha (o en modo "Drive" si es
+    automatico) y soltar suavemente el embrague/freno mientras se
+    presiona el acelerador para comenzar a avanzar.
+11. Mientras se conduce, observar constantemente la via, las senales de
+    transito y los semaforos:
+      - SI el semaforo esta en rojo, ENTONCES detener el vehiculo y
+        esperar.
+      - SI el semaforo esta en verde, ENTONCES continuar circulando.
+      - SI aparece una senal de "PARE" o un peaton cruzando, ENTONCES
+        detener el vehiculo hasta que el paso quede libre.
+12. Usar los intermitentes antes de girar o cambiar de carril, y verificar
+    los espejos antes de cada maniobra.
+13. Mantener una velocidad adecuada segun el limite de la via y la
+    distancia de seguridad con el vehiculo de adelante.
+14. Al llegar al destino, reducir la velocidad, usar el intermitente y
+    ubicar un lugar apto para estacionar.
+15. Estacionar el vehiculo, poner el freno de mano, apagar el motor,
+    quitar el cinturon de seguridad y bajar del vehiculo.
+FIN
+
+===============================================================================
+b) ALGORITMO: REALIZAR UNA LLAMADA TELEFONICA
+===============================================================================
+
+INICIO
+ 1. Tomar el telefono en la mano.
+ 2. Encender la pantalla y desbloquear el telefono (si esta bloqueado).
+ 3. Verificar que el telefono tenga senal de red y saldo/credito
+    suficiente (o un plan activo).
+ 4. Abrir la aplicacion o funcion de "Llamadas" / "Telefono".
+ 5. Buscar el numero de contacto en la agenda, o escribirlo manualmente
+    si no esta guardado.
+ 6. Presionar el boton de "Llamar".
+ 7. Esperar a que el telefono marque y a que la otra persona conteste,
+    escuchando el tono de llamada.
+ 8. Evaluar el resultado de la espera:
+      - SI la persona CONTESTA, ENTONCES saludar, comunicar el motivo de
+        la llamada y mantener la conversacion.
+      - SI la persona NO CONTESTA despues de varios tonos, ENTONCES
+        colgar la llamada y decidir si se deja un mensaje de voz o se
+        intenta llamar nuevamente mas tarde.
+ 9. Una vez terminada la conversacion, despedirse de la otra persona.
+10. Presionar el boton de "Finalizar llamada" (colgar).
+11. Guardar o anotar, si es necesario, algun dato importante que se haya
+    acordado durante la llamada.
+FIN
+
+===============================================================================
+c) ALGORITMO: RESOLVER LA ECUACION CUADRATICA
+===============================================================================
+
+La ecuacion cuadratica tiene la forma general:
+
+        a*x^2 + b*x + c = 0
+
+donde "a", "b" y "c" son numeros conocidos (con "a" distinto de cero).
+
+INICIO
+ 1. Solicitar y leer el valor del coeficiente "a" (el que acompana a x^2).
+ 2. Solicitar y leer el valor del coeficiente "b" (el que acompana a x).
+ 3. Solicitar y leer el valor del coeficiente "c" (el termino independiente).
+ 4. Calcular el DISCRIMINANTE de la ecuacion, que es el valor:
+        discriminante = b*b - 4*a*c
+    (Este numero es el que indica cuantas soluciones reales tiene la
+    ecuacion y de que tipo son.)
+ 5. Evaluar el signo del discriminante:
+      - SI el discriminante es MAYOR que cero, ENTONCES la ecuacion tiene
+        DOS soluciones reales y distintas. Calcular:
+            x1 = (-b + raiz_cuadrada(discriminante)) / (2*a)
+            x2 = (-b - raiz_cuadrada(discriminante)) / (2*a)
+        y mostrar ambos valores.
+      - SI el discriminante es IGUAL a cero, ENTONCES la ecuacion tiene
+        UNA sola solucion real (una raiz doble). Calcular:
+            x = -b / (2*a)
+        y mostrar ese valor.
+      - SI el discriminante es MENOR que cero, ENTONCES la ecuacion NO
+        tiene soluciones reales (tiene dos soluciones complejas o
+        imaginarias). En ese caso, mostrar un mensaje indicando que las
+        soluciones son numeros complejos (no reales).
+ 6. Mostrar en pantalla el resultado obtenido segun el caso anterior.
+FIN
+
+NOTA: Esta es la descripcion del algoritmo en lenguaje natural, tal como
+lo pide este problema. La version completa programada en C++ (con todos
+los casos, incluyendo la validacion de que "a" no sea cero) se desarrolla
+en el Problema 13 de este mismo practico.
