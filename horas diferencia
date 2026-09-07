@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std; 
+int main(){ 
+    int ihoras,iminutos,isegundos,
+    fhoras,fminutos,fsegundos,
+    dhoras,dminutos,dsegundos,
+    dscMinuto = 0, dscHora=0;
+    
+    cout<<"============================================= INICIO ============================================="<<endl;
+    cout<<"Horas: "<<endl;
+    cin>>ihoras;
+
+    cout<<"Minutos: "<<endl;
+    cin>>iminutos;
+
+    cout<<"Segundos: "<<endl;
+    cin>>isegundos;
+
+    cout<<"============================================= SALIDA ============================================="<<endl;
+    cout<<"Horas: "<<endl;
+    cin>>fhoras;
+
+    cout<<"Minutos: "<<endl;
+    cin>>fminutos;
+    
+    cout<<"Segundos: "<<endl;
+    cin>>fsegundos;
+    
+    // 01: 30 : 25 FIN
+    // 00: 00:  55 INICIO
+    
+    // 01: 30 - 1 : 25 + 60 - 55
+    
+    dsegundos = fsegundos - isegundos;
+    if(dsegundos < 0){
+        dsegundos += 60;
+        dscMinuto = 1; 
+    }
+    
+    dminutos = fminutos - iminutos - dscMinuto;
+    if(dminutos < 0) {
+        dminutos += 60;
+        dscHora = 1;
+    }
+    
+    dhoras = fhoras - dscHora - ihoras;
+    if(dhoras < 0) {
+        cout<< "Ingreso erroneo, la hora de fin debe ser mayor que la de inicio"<<endl;
+    }else{
+        cout<<"Diferencia de horas: "<<dhoras<<endl;
+        cout<<"Diferencia de minutos: "<<dminutos<<endl;
+        cout<<"Diferencia de segundos: "<<dsegundos<<endl;
+    }
+    
+
+    return 0;
+}
